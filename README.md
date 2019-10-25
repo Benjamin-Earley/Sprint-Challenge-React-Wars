@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+    React JS is a UI library for creating complex dynamic interfaces out of simple reusable components while solving the issues of separating concerns (which is done by making components which each have one central purpose) and replacing imperative coding with declarative coding (which isn't concerned about how React gets things done, only THAT it gets things done).
+
 - [ ] What does it mean to _think_ in react?
+
+    To think in react means to think along the lines of composing modular reusable components that are written explicitly.
 
 - [ ] Describe state.
 
+    State is data that is passed to/through a React app and is used to render different components within the dataflow hierarchy.
+
 - [ ] Describe props.
 
+    Props is the mechanism through which state is passed through the dataflow hierarchy.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+    Side effects are anything that affects something outside of the function being executed. You sync effects by passing in a dependency array as the second argument in the effect hook.
 
 ## Project Set Up
 

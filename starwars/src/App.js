@@ -18,9 +18,6 @@ const App = () => {
             // console.log(charList)
             setCharacter(character = Object.values(charList.data.results))
               console.log(character)
-              character.map((item, index) => {
-                return <CharacterComponent key={`${item.name}-${index}`} character={item} fact={item.height} />
-              })
           })
           .catch(err => {
             console.log(`Error:` + err)
@@ -33,6 +30,10 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      {character.map((item, index) => {
+          return <CharacterComponent key={`${item.name}-${index}`} character={item} fact={item.height} />
+        })
+      }  
     </div>
   );
 }
@@ -40,8 +41,8 @@ const App = () => {
 function CharacterComponent(props) {
   return (
     <div>
-      <h3>{props.character.name}</h3>
-      <p>{props.character.fact}</p>
+      <h2>{props.character.name}</h2>
+      <h3>Height : {props.fact} space-height-units</h3>
     </div>
   )
 }
